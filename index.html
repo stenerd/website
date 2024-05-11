@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourierpay</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,500,700&f[]=clash-display@400&display=swap" rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+
+<!-- border: 1.5px solid #D1D6D6 -->
+
+<body>
+    <div class="overflow-hidden main-body">
+        <section class="hero_section min-h-95vh md:min-h-screen overflow-hidden ">
+            <header>
+                <div class="header mx-auto c-py-1_25 c-container ">
+                    <div class="header_image cursor-pointer z-30">
+                        <img src="./images/logo.svg" />
+                    </div>
+                    <div class="header_list c-header_list space-x-5 md:flex justify-between hidden">
+                        <a href="#">
+                            <h3 class="c-text-p">Home</h3>
+                        </a>
+                        <a href="#solution-options">
+                            <h3 class="c-text-p">Services</h3>
+                        </a>
+
+                        <a href="#solution-options">
+                            <h3 class="c-text-p">Process</h3>
+                        </a>
+
+                        <a href="#">
+                            <h3 class="c-text-p">FAQs</h3>
+                        </a>
+                    </div>
+                    <!-- <div class="menu-toggle" id="menu-toggle">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div> -->
+                    <div class="off-screen-menu md:hidden">
+                        <ul>
+                            <!-- <li><a href="#">About Us</a></li> -->
+                            <li><a href="#">Home</a></li>
+                            <!-- <li><a href="#">Testimonials</a></li> -->
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Process</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                        <div class="flex space-x-5 contain">
+                            <button class="py-1 px-6 rounded-md  border border-[#D1D6D6]">Login</button>
+                            <button class="py-1 px-6 rounded-md  getstarted" style="background-color: #97F675;">Get
+                                Started</button>
+                        </div>
+                    </div>
+                    <!-- <div id="myNav" class="overlay">
+
+                      
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                        <div class="overlay-content">
+                            <a href="#">About</a>
+                            <a href="#">Services</a>
+                            <a href="#">Clients</a>
+                            <a href="#">Contact</a>
+                        </div>
+
+                    </div> -->
+                    <nav class="md:hidden">
+                        <div class="ham-menu md:hidden" style="z-index: 1000;">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </nav>
+                    <div class="md:flex space-x-4 hidden">
+                        <button class="py-1 px-5 rounded-md  header_button">Login</button>
+                        <button class="py-2 px-5 rounded-md primary_color ">Get Started</button>
+                    </div>
+                </div>
+
+            </header>
+            <div class="w-full flex relative justify-end pt-[3rem] main_section_001">
+
+                <div class="relative flex c-container c-pt-2_5 md-pt c-h-80">
+                    <div class="flex-1 inner_content flex justify-center flex-col space-y-4">
+                        <h2 class="hero_text text-[#065143] text-left leading-[1.8] c-fw-600 hidden md:block">Manage payments
+                            <span class="hero_text2"> easily with <span> One Link </span></span>
+                        </h2>
+
+                        <h2 class="hero_text text-[#065143] text-left leading-[1.8] c-fw-600 block md:hidden">Manage payments
+                            <span class="hero_text2"> with <span> One Link </span></span>
+                        </h2>
+
+                        <p class="w-[100%] md:w-[80%] c-text-p header-sub-text">Create a personalized payment link,
+                            share it instantly,
+                            and track everything in real-time from your dashboard.
+                        </p>
+                        <button class="bg-[#F8E063] rounded-md px-2 py-3 c-mt-3 c-text-p2">Create a free
+                            Account</button>
+                    </div>
+                    <div class="md:flex-1 md:flex hidden">
+                        <div class="relative w-full">
+                            <div class="relative w-full c-mt-2">
+                                <div class="absolute z-30 floatt opacity-0">
+                                    <img src="./images/float.svg" />
+                                </div>
+                                <div class="absolute cursor-pointer float2 z-30 opacity-0">
+                                    <img src="./images/float1.svg" />
+                                </div>
+                                <!-- <div class="absolute  mobile-abs z-10">
+                                                                <img src="./images/mobilemockup.png" />
+                                                            </div>  -->
+                                <!-- <div>
+                                                                <img class="dashboard-img" src="./images/dashboard.svg" />
+                                                            </div> -->
+                                
+                                <div class="absolute  mobile-abs first z-10 opacity-0">
+                                    <img src="./images/phone1.svg" class="mobile-abs-img" />
+                                </div>
+                                
+                                <div class="absolute  mobile-abs second z-5">
+                                    <img src="./images/phone2.svg" class="mobile-abs-img" />
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="main_section flex justify-between items-center mt-5 c-w-50"> -->
+                <!-- <div class="absolute w-full">
+                        
+                        
+                    </div> -->
+                <!-- <div class="flex-1"></div> -->
+                <!-- <div class="md:flex-1 md:flex hidden">
+                        <div class="relative c-pt-5">
+                            <div class="absolute z-30 floatt  cursor-pointer">
+                                <img src="./images/float.svg" />
+                            </div>
+                            <div class="absolute cursor-pointer float2 z-30">
+                                <img src="./images/float1.svg" />
+                            </div>
+                            <div class="absolute  mobile-abs z-10">
+                                <img src="./images/mobilemockup.png" />
+                            </div> 
+                            <div>
+                                <img class="dashboard-img" src="./images/dashboard.svg" />
+                            </div>
+                            
+                        </div>
+                    </div> -->
+                <!-- </div> -->
+            </div>
+        </section>
+        <section class="py-12 md:py-32 w-full solution-options" id="solution-options">
+            <div class="section-001 c-container  mx-auto flex-col flex md:flex-row justify-between items-center">
+                <div class="flex-auto md:w-4/12 space-y-5 services w-full">
+                    <!-- <button class="py-2 px-4 rounded-md "><span class="text-red-500 font-bold">
+                        </span> &nbsp; </button> -->
+                    <div class="md:w-9/12 w-full">
+                        <h2 class="text-[#1C2634] about-text c-fw-200 hidden md:block">
+                            One <br /> Solution <br /> for all <br /> <span class="text-[#15C01A]">Payments</span> </h2>
+                        <h2 class="text-[#1C2634] about-text c-fw-200 block md:hidden">
+                            Why should I create a  <span class="text-[#15C01A]">Link?</span> </h2>
+                        <!-- <p class="text-[#464E4D] service_text">At Fourierpay, our services cater to a variety of diverseß
+                                organizations, addressing their comprehensive payment <br />needs and management.</p> -->
+                        <div class="hidden md:flex items-center c-mt-3 space-x-3">
+                            <!-- <img src="./images/back.svg" class="cursor-pointer" id="scroll-right-btn" /> -->
+                            <img src="./images/back.svg" class="cursor-pointer" />
+                            <img src="./images/front.svg" class="cursor-pointer" />
+                        </div>
+                    </div>
+
+                </div>
+                <!-- flex-1 flex container gap-7 flex-nowrap overflow-x-scroll -->
+                <!-- flex-auto  md:w-8/12 relative -->
+                <div class="flex-1 flex-auto md:w-8/12 container gap-7 flex-nowrap overflow-x-scroll relative service-cards">
+                    <div class="absolute about-grading"></div>
+                    <div class="flex  container gap-7 flex-nowrap overflow-x-scroll">
+
+
+
+                        <div class="py-10 md:py-20 space-y-3  rounded-xl cardd px-5 card-1 mx-auto" id="cardd">
+                            <div class="inner-one relative space-y-5">
+                                <h2 class="text-[#97F675] c-fw-600">For Departments and Faculties</h2>
+                                <p class="text-[#97F675] c-fs-1_1 c-fw-300">Manage finances easily for your faculty or
+                                    department. Recieve payments, track
+                                    funding, and maintain financial records with precision.</p>
+                                <button class="py-2 absolute c-abs-b-0 px-8 rounded-md">Get Started</button>
+                            </div>
+                        </div>
+
+                        <div class="py-10 md:py-20 space-y-3  rounded-xl cardd px-5 card-4 mx-auto" id="cardd">
+                            <div class="inner-one relative space-y-5">
+                                <h2 class="text-[#97F675] c-fw-600">For Secondary Schools</h2>
+                                <p class="text-[#97F675] c-fs-1_1 c-fw-300">Collect student fees, track expenses, and
+                                    maintain accurate records, so you can focus on what matters.</p>
+                                <button class="py-2 absolute c-abs-b-0 px-8 rounded-md">Coming Soon</button>
+                            </div>
+                        </div>
+
+                        <div class="py-10 md:py-20 space-y-3  rounded-xl px-5 cardd card-3 mx-auto" id="cardd">
+                            <div class="inner-one relative space-y-5">
+                                <h2 class="text-[#97F675] c-fw-600">Small & Medium Enterprises</h2>
+                                <p class="text-[#97F675] c-fs-1_1 c-fw-300">One link lets you track, manage, and receive
+                                    payments, ensuring smooth and reliable money management.</p>
+                                <button class="py-2 absolute c-abs-b-0 px-8 rounded-md">Coming Soon</button>
+                            </div>
+                        </div>
+
+                        <div class="py-10 md:py-20 space-y-3 rounded-xl cardd px-5 card-2 mx-auto" id="cardd">
+                            <div class="inner-one relative space-y-5">
+                                <h2 class="text-[#1C2634] c-fw-600">For Celebrations & Contributions</h2>
+                                <p class="text-[#97F675] c-fs-1_1 c-fw-300">Mark special moments and contribute to what
+                                    you care about. Easily set up a payment link for events and projects you cherish.
+                                </p>
+                                <button class="py-2 absolute c-abs-b-0 px-8 rounded-md">Coming Soon</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="flex w-full space-x-3 md:hidden">
+                    <img src="./images/back.svg" class="cursor-pointer" />
+                    <img src="./images/front.svg" class="cursor-pointer" />
+                </div> -->
+            </div>
+        </section>
+        <section>
+        </section>
+        <section class="py-12 md:py-24 c-sec-color">
+            <div class="section-001 onboard gap-20 mx-auto flex">
+                <div class="md:w-5/12">
+                    <div class="py-5">
+                        <!-- <button class="py-2 px-4 font-bold rounded-md "><span class="text-red-500 font-bold">
+                            </span>🚀 &nbsp; Let’s go</button> -->
+                        <h2 class="font-bold c-fc-p2 relative hidden md:block">Get <span>Onboard</span> in <br /> 5 mins <div
+                                class="absolute c-subtext-abs"></div>
+                        </h2>
+
+                        <h2 class="font-bold c-fc-p2 relative block md:hidden">Get Onboard<br />in 5 mins 
+                            <!-- <div
+                                class="absolute c-subtext-abs"></div> -->
+                        </h2>
+                        <!-- <p class="c-fc-s2 mt-0 c-f1-11">Register with us in a couple of steps and come onboard to <br /> have a wonderful experience -->
+                        </p>
+                    </div>
+                    <div class="py-3 md:py-8 space-y-10 md:space-y-8 mb-12">
+                        <!-- <div class="space-y-2">
+                            <div class="flex items-center space-x-3">
+                                <div>
+                                    <img src='./images//flow.png' />
+                                </div>
+                                <div class="space-y-2">
+                                    <h6 class="font-bold">Select what type of user you are</h6>
+                                    <p class="text-[#8D9693]">First step is to choose the type of user you are as this
+                                        is a
+                                        key step to determine your experience on the platform</p>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="space-y-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-1/12">
+                                    <img src='./images/good.svg' width="50" />
+                                </div>
+                                <div class="space-y-0 md:space-y-2 w-11/12">
+                                    <h6 class="font-bold c-fc-p2">Create a custom link</h6>
+                                    <p class="c-fc-s2 hidden md:block">Create your link for any payment. Add unique details <br /> like
+                                        class, school ID, email addresses, or phone numbers.</p>
+
+                                    <p class="c-fc-s2 block md:hidden">Create your link for any payment. Add unique details like
+                                        class, school ID, email addresses, or phone numbers.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-1/12">
+                                    <img src='./images/good.svg' width="50" />
+                                </div>
+                                <div class="space-y-0 md:space-y-2 w-11/12">
+                                    <h6 class="font-bold c-fc-p2">Share link easily</h6>
+                                    <p class="c-fc-s2 hidden md:block">Easily send your custom link to your students, customers,<br />
+                                        friends or family.</p>
+
+                                    <p class="c-fc-s2 block md:hidden">Easily send your custom link to your students, customers, friends or family.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-1/12">
+                                    <img src='./images/good.svg' width="50" />
+                                </div>
+                                <div class="space-y-0 md:space-y-2 w-11/12">
+                                    <h6 class="font-bold c-fc-p2">Receive payments </h6>
+                                    <p class="text-[#8D9693] c-fc-s2 hidden md:block">Track and organize all payments coming in real
+                                        time from <br /> your dashboard. </p>
+                                    <p class="text-[#8D9693] c-fc-s2 block md:hidden">Track and organize all payments coming in real
+                                        time from your dashboard. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4 hidden flex-1 md:flex gap-10 space-x-2 items-center relative">
+                    <div class="absolute c-get-onboard-abs">
+                        <img src="./images/register.svg" alt="onboard">
+                    </div>
+                    <!-- <div>
+                        <div class="py-2 space-y-1">
+                            <h2>Welcome </h2>
+                            <p>Kindly select the type of user you are</p>
+                        </div>
+                        <div class="py-3 space-y-4">
+                            <div class="flex cursor-pointer items-center py-2 px-5 rounded-xl border border-[#04D940] space-x-3"
+                                style="border-color: #04D940;">
+                                <div>
+                                    <img src="./images/Frame 844.png" />
+                                </div>
+                                <div>
+                                    <h5>Secondary Schools</h5>
+                                    <p style="font-size: 13.93px;">Register as a secondary and manage your finances</p>
+                                </div>
+                                <div>
+                                    <img src="./images/Icons.png" />
+                                </div>
+                            </div>
+                            <div
+                                class="flex cursor-pointer items-center py-2 px-5 rounded-xl border border-gray-300 space-x-3">
+                                <div>
+                                    <img src="./images/Frame 844 (1).png" />
+                                </div>
+                                <div>
+                                    <h5>University department/Faculty</h5>
+                                    <p style="font-size: 13.93px;">Get started and manage your dues and fees</p>
+                                </div>
+                                <div>
+                                    <img src="./images/Icons (1).png" />
+                                </div>
+                            </div>
+                            <div
+                                class="flex cursor-pointer items-center  py-2 px-5 rounded-xl border border-gray-300  space-x-3">
+                                <div>
+                                    <img src="./images/Frame 844 (2).png" />
+                                </div>
+                                <div>
+                                    <h5>SMEs</h5>
+                                    <p style="font-size: 13.93px;">Oversee your organizations funds effectively</p>
+                                </div>
+                                <div>
+                                    <img src="./images/Icons (1).png" />
+                                </div>
+                            </div>
+                            <div
+                                class="flex cursor-pointer items-center space-x-3 py-2 px-5 rounded-xl border border-gray-300">
+                                <div>
+                                    <img src="./images/Frame 844 (3).png" />
+                                </div>
+                                <div>
+                                    <h5>CrowdFunding</h5>
+                                    <p style="font-size: 13.93px;">Manage crowd fundings and contributions seamlessly
+                                    </p>
+                                </div>
+                                <div>
+                                    <img src="./images/Icons (1).png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./images/onboard.png" />
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <!-- <section class="py-6 md:py-24">
+            <div class="flex c-container first_frame mx-auto py-5 justify-between items-center">
+                <div class=" w-5/12 relative">
+                    <div class="absolute c-eff-abs"></div>
+                    <h2 class="relative c-text-p2 c-zindex-1">Easily Accept & <br /> Organize Payments 
+                    </h2>
+                    <p class="mt-0 c-fw-300">Access tools Real time updates about your payments, to 
+                        customized dashboard to show you what is important.  <br /> 
+                         <br /></p>
+                    <div class="space-y-5 mt-8">
+                        <div class="flex items-center space-x-2 c-f1-12">
+                            <img src="./images/listgood.svg" />
+                            <p>Manage your payments effortlessly.</p>
+                        </div>
+                        <div class="flex items-center space-x-2 c-f1-12">
+                            <img src="./images/listgood.svg" />
+                            <p>Receive smooth payment notifications and updates</p>
+                        </div>
+                        <div class="flex items-center space-x-2 c-f1-12">
+                            <img src="./images/listgood.svg" />
+                            <p>Simplified and streamlined financial tracking.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-6/12 hidden md:flex">
+                    <img src="./images/FirstFrame.svg" />
+                </div>
+            </div>
+        </section> -->
+        <section class="pt-12 pb-6 md:py-24">
+            <div
+                class="flex c-container gap-x-10 second_frame space-y-5 md:space-y-0 flex-col md:flex-row mx-auto py-5 justify-between items-center">
+                <div class="md:w-6/12 hidden md:block">
+                    <img src="./images/SecondFrame.svg" />
+                </div>
+                <div class="md:w-5/12 relative">
+                    <div class="absolute c-simp-abs"></div>
+                    <h2 class="relative c-text-p2 c-zindex-1">Simplify Payment Processes</h2>
+                    <p class="mt-0 c-fw-300 hidden md:block">We simplify your payments
+                        <br />by working with highly secure and performant payment providers.
+                    </p>
+
+                    <p class="mt-0 c-fw-300 block md:hidden">We simplify your payments by working with highly secure and performant payment providers.
+                    </p>
+                    <div class="space-y-4 md:space-y-5 mt-8 whatwedo">
+                        <div class="flex items-center space-x-2 c-f1-12">
+                            <img src="./images/listgood.svg" />
+                            <p>Easy and Diverse payment options</p>
+                        </div>
+                        <div class="flex items-center space-x-2 c-f1-12">
+                            <img src="./images/listgood.svg" />
+                            <p>Secure payment providers</p>
+                        </div>
+                        <div class="flex items-center space-x-2 c-f1-12">
+                            <img src="./images/listgood.svg" />
+                            <p>Advanced payment </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-6/12 block md:hidden">
+                    <img src="./images/SecondFrame.svg" class="mt-5" />
+                </div>
+            </div>
+        </section>
+        <section class="pt-0 pb-12 md:py-24">
+            <div
+                class="flex c-container flex-col gap-8 md:flex-row gap-x-10 third_frame mx-auto py-0 md:py-5 justify-between items-center">
+                <div class="relative md:w-5/12">
+                    <div class="absolute c-tra-abs"></div>
+                    <h2 class="relative c-text-p2 c-zindex-1">Detailed Reports and Management</h2>
+                    <p class="mt-0 c-fw-300"> By providing statistics for tracking payments,
+                        generating reports, We enhance transparency and make
+                        managing your funds easier.</p>
+                    <div class="space-y-5 mt-8 whatwedo">
+                        <div class="flex items-center space-x-2 c-f1-12">
+                            <img src="./images/listgood.svg" />
+                            <p>Manage your payments effortlessly.</p>
+                        </div>
+                        <div class="flex items-center space-x-2 c-f1-12">
+                            <img src="./images/listgood.svg" />
+                            <p>Receive smooth payment notifications and updates.</p>
+                        </div>
+                        <div class="flex items-center space-x-2 c-f1-12">
+                            <img src="./images/listgood.svg" />
+                            <p>Simplified and streamlined financial tracking.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-6/12">
+                    <img src="./images/ThirdFrame.svg" />
+                </div>
+            </div>
+        </section>
+        <section class="py-6 md:py-24 c-review">
+            <div class="third_frame c-container">
+                <div class="text-center mb-5 hidden md:block">
+                    <h2>What Our Customers are<br /> Saying</h2>
+                </div>
+                <div class="text-center mb-3 block md:hidden">
+                    <h2>Reviews</h2>
+                </div>
+                <div
+                    class="flex flex-col-reverse md:flex-row gap-x-16 content-card  mx-auto px-4 py-4 bg-white justify-between items-center">
+                    <div class="space-y-5 flex-1 pl-0 md:pl-6">
+                        <div class="rating">
+                            <img src="./images/starr.svg" />
+                        </div>
+                        <div>
+                            <h6 class="c-fw-300 review_text ">
+                                As a small business owner, Managing my payments has never been easier.
+                                I can now focus better on other things.</h6>
+                        </div>
+                        <div class="space-y-2 hendrix ">
+                            
+                            <h6 class="font-bold text-black pt-4">Ian Hendrix
+                            </h6>
+                            <p class="text-sm text-[#8D9693]">Business owner </p>
+                            <div class="block md:hidden pb-3">
+                                <img src="./images/starr.svg" width="130" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <img src="./images/testimonial.svg" class="" />
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="pt-12 pb-6 faq md:py-24 c-container">
+            <div class="flex flex-col md:flex-row gap-x-10  mx-auto py-4 bg-white justify-between items-start">
+                <div class="py-3 space-y-2 flex-1">
+                    <button class="py-2 px-5  rounded-md faqq">❓FAQs</button>
+                    <h3>Frequently asked questions</h3>
+                    <p class="c-fw-300">Discover all the answers you seek regarding our
+                        products, payments, and more. If you can't find the
+                        information you're looking for, please reach out via email.</p>
+                </div>
+                <div class="divide-y space-y-6 flex-1">
+                    <details open:bg-white cursor-pointer>
+                        <summary class="flex justify-between items-center cursor-pointer transition ease-in-out">
+                            <h4>How does it work ?</h4>
+                            <span class="cursor-pointer text-3xl">+</span>
+                        </summary>
+                        <p class="py-2 text-gray-400">Its super easy , Sign up with your email , Choose what you want to collect payments for . Create a link and send to the users that need to make payments .    
+                        </p>
+                    </details>
+
+                    <details open:bg-white cursor-pointer>
+                        <summary class="flex justify-between items-center cursor-pointer transition ease-in-out">
+                            <h4>Can I create different payment links on one account ?</h4>
+                            <span class="cursor-pointer text-3xl">+</span>
+                        </summary>
+                        <p class="py-2 text-gray-400">Yes sure you can , You can create multiple payment links for different products. from contributions for special
+                        occasions to fee collection for what you want to</p>
+                    </details>
+
+                        <details open:bg-white cursor-pointer>
+                            <summary class="flex justify-between items-center cursor-pointer transition ease-in-out">
+                                <h4>Are there fees ?</h4>
+                                <span class="cursor-pointer text-3xl">+</span>
+                            </summary>
+                            <p class="py-2 text-gray-400"> We charge a 3% fee on each transaction .  which is paid by the users as they make payments , Ensuring that you get your payment in full. 
+                            </p>
+                        </details>
+
+                    <details open:bg-white cursor-pointer>
+                        <summary class="flex justify-between items-center cursor-pointer transition ease-in-out">
+                            <h4>What payments do you accept ? </h4>
+                            <span class="cursor-pointer text-3xl">+</span>
+                        </summary>
+                        <p class="py-2 text-gray-400"> We collaborate with the best payment providers in Africa to make payments easy, Card Payments , Bank Transfers , USSD , and more </p>
+                    </details>
+
+
+                    <details open:bg-white cursor-pointer>
+                        <summary class="flex justify-between items-center cursor-pointer transition ease-in-out">
+                            <h4>Will anybody have access  to my links?</h4>
+                            <span class="cursor-pointer text-3xl">+</span>
+                        </summary>
+                        <p class="py-2 text-gray-400">We offer private and public links . Only people that you send the links can pay . However,  Private links allow you to create a link and upload a CSV file containing the specific users who need to pay. This safeguards the link from unauthorized users even if they have the link.</p>
+                    </details>
+
+                    <!-- >Can pay with different links ? -->
+                    <!-- When can i withdraw funds ? -->
+                    <!-- How can i create payment links -->
+                    <!-- Can i have more than one type of account ? -->
+                    <!-- Can anybody join my link? -->
+                </div>
+            </div>
+        </section>
+        <section class="py-12 md:py-24 c-container pre-footer">
+            <div class="pre-footer-001 py-12 md:px-20 px-10 flex justify-center items-center rounded-3xl">
+                <div class="flex justify-center items-center flex-col">
+                    <h2 class="text-center">Unlock
+                        <br /> Easy Payments
+                    </h2>
+                    <p class="text-white w-[95%] md:w-4/5 text-center c-f1-12 c-fw-300 pt-10">
+                        Sign up right now, Set up your custom link today, and simply track everything in one place</p>
+                    <div class="pb-4 pt-12">
+                        <button class="bg-[#97F675] c-f1-12 py-2 px-8 rounded-md">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="py-12 md:py-24">
+            <div class="py-12 px-4 footer-1 c-container gap-10 flex flex-col md:flex-row justify-between items-start">
+                <!-- <div class="space-y-4 md:space-y-7 md:w-3/12">
+                    <img src="./images/fourie.svg" width="130" />
+                    <p class="text-white c-fw-300">Experience ease with your personal and business finances.</p>
+                    <div class="inputed-001 py-4 px-6 border-red-500 border rounded-lg">
+                        <div class="space-y-4">
+                            <h2 class="text-white font-bold outline-none"
+                            >Join Our Newsletter</h2>
+                            <div class="flex space-x-2 items-center flex-col md:flex-row gap-4">
+                                <input placeholder="Enter Your Email Address"
+                                    class="py-2 c-fw-300 px-3 border-0 text-white rounded-md bg-[#1C2634]" />
+                                <button class="c-fw-300 py-2 px-3 subscribe-button rounded-md"
+                                >Subscribe</button>
+                            </div>
+                            <p class="text-gray-500 text-sm">By
+                                subscribing, you agree to the <span class="underline cursor-pointer"
+                                >Privacy Policy</span></p>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="space-y-0 md:space-y-5 flex-1">
+                    <img src="./images/fourie.svg" />
+                    <!-- <p class="text-white font-semibold" style="font-family:'Clash Display', sans-serif">Bid farewell to
+                        intricacies and embrace ease as Fourierpay
+                        revolutionizes the
+                        manner in which you oversee all your financial matters.</p> -->
+                    <p class="text-white c-fw-300 pt-2">Experience ease with your personal and business finances.</p>
+                    <!-- <div class="inputed-001 py-4 px-6 border-red-500 border rounded-lg">
+                        <div class="space-y-4">
+                            <h2 class="text-white font-bold outline-none"
+                                style="font-family:'Clash Display', sans-serif">Join Our Newsletter</h2>
+                            <div class="flex space-x-2 items-center flex-col md:flex-row gap-4">
+                                <input placeholder="Enter Your Email Address"
+                                    class="py-2 px-3 border-0 text-white rounded-md bg-[#1C2634]" />
+                                <button class="font-bold py-2 px-3 subscribe-button rounded-md"
+                                    style="font-family:'Clash Display', sans-serif">Subscribe</button>
+                            </div>
+                            <p class="text-gray-500 text-sm" style="font-family:'Clash Display', sans-serif">By
+                                subscribing, you agree to the <span class="underline cursor-pointer"
+                                    style="font-family:'Clash Display', sans-serif">Privacy Policy</span></p>
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="flex w-full block md:hidden">
+                    <div class="space-y-5 flex-1 text-white text-left c-fw-300">
+                        <h3 class="text-gray-200 font-semibold py-1">Company</h3>
+                        <h3 class="c-fw-300 c-f1-09">About Us</h3>
+                        <h3 class="c-fw-300 c-f1-09">Features</h3>
+                        <h3 class="c-fw-300 c-f1-09">Testimonial</h3>
+                    </div>
+                    <div class="space-y-5 flex-1 text-white text-left c-fw-300">
+                        <h3 class="text-gray-200 py-1 font-semibold">Socials</h3>
+                        <h3 class="c-fw-300 c-f1-09">Twitter</h3>
+                        <h3 class="c-fw-300 c-f1-09">Facebook</h3>
+                        <h3 class="c-fw-300 c-f1-09">Instagram</h3>
+                        <h3 class="c-fw-300 c-f1-09">Tiktok</h3>
+                    </div>
+                </div>
+
+                <div class="flex w-full block md:hidden">
+                    <div class="space-y-5 flex-1 text-white text-left c-fw-300">
+                        <h3 class="text-gray-200 py-1 font-semibold">Legal</h3>
+                        <h3 class="c-fw-300 c-f1-09">Terms</h3>
+                        <h3 class="c-fw-300 c-f1-09">Privacy</h3>
+                    </div>
+                    <div class="space-y-5 flex-1 text-white text-left c-fw-300">
+                        <h3 class="text-gray-200 py-1 font-semibold">Contact Info</h3>
+                        <h3 class="c-fw-300 c-f1-09">+234 362 263 27</h3>
+                        <h3 class="c-fw-300 c-f1-09">fourierpay@gmail.com</h3>
+                    </div>
+                </div>
+
+                <div class="space-y-5 flex-1 text-white text-left c-fw-300 hidden md:block">
+                    <h3 class="text-gray-200 font-semibold py-1">Company</h3>
+                    <h3 class="c-fw-300 c-f1-09">About Us</h3>
+                    <h3 class="c-fw-300 c-f1-09">Features</h3>
+                    <h3 class="c-fw-300 c-f1-09">Testimonial</h3>
+                </div>
+                <div class="space-y-5 flex-1 text-white text-left c-fw-300 hidden md:block">
+                    <h3 class="text-gray-200 py-1 font-semibold">Socials</h3>
+                    <h3 class="c-fw-300 c-f1-09">Twitter</h3>
+                    <h3 class="c-fw-300 c-f1-09">Facebook</h3>
+                    <h3 class="c-fw-300 c-f1-09">Instagram</h3>
+                    <h3 class="c-fw-300 c-f1-09">Tiktok</h3>
+                </div>
+                <div class="space-y-5 flex-1 text-white text-left c-fw-300 hidden md:block">
+                    <h3 class="text-gray-200 py-1 font-semibold">Legal</h3>
+                    <h3 class="c-fw-300 c-f1-09">Terms</h3>
+                    <h3 class="c-fw-300 c-f1-09">Privacy</h3>
+                </div>
+                <div class="space-y-5 flex-1 text-white text-left c-fw-300 hidden md:block">
+                    <h3 class="text-gray-200 py-1 font-semibold">Contact Info</h3>
+                    <h3 class="c-fw-300 c-f1-09">+234 362 263 27</h3>
+                    <h3 class="c-fw-300 c-f1-09">fourierpay@gmail.com</h3>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./app.js"></script>
+    <script src="script.js"></script>
+    <script src="gsap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+
+</body>
+</html>
